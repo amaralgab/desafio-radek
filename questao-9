@@ -1,0 +1,11 @@
+Injeção de dependências é um padrão de arquitetura que possibilita que uma classe insira dependências em outra classe. No Spring, a injeção de dependências pode ser feita marcando os pontos de injeção através da anotação @Autowired. Além disso, a classe precisa se tornar um bean Spring. Para isso, devemos utilizar alguma das seguintes anotações: @Component, @Repository, @Service ou @Controller. Segue um exemplo simples da utilização destas anotações:
+
+@Component
+public class ComponentExample {
+    
+    @Autowired
+    private ServiceExample serviceExample;
+    
+    // métodos da aplicação aqui
+    
+}
