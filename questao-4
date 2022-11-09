@@ -1,1 +1,17 @@
-
+SELECT
+	CASE WHEN N.NOTA < 8 THEN NULL ELSE A.NOME END AS NOME,
+	CASE WHEN A.VALOR BETWEEN N.VALOR_MIN AND N.VALOR_MAX THEN N.NOTA END AS NOTA,
+	A.VALOR
+FROM ALUNOS AS A
+INNER JOIN NOTAS AS N
+ON (A.VALOR BETWEEN N.VALOR_MIN AND N.VALOR_MAX)
+ORDER BY
+	N.NOTA DESC,
+	CASE WHEN N.NOTA >= 8 THEN A.NOME END ASC,
+	CASE WHEN N.NOTA < 8 THEN A.VALOR END ASC;
+  
+  
+  
+/*O retorno desta query não é o exatamente o mesmo do demonstrado no "Exemplo de saída" no corpo da questão.
+  A diferença no retorno é em relação à ordenação dos alunos com nota 9 (Julia e Marcela), onde na questão pede para que nestes casos seja ordenado alfabeticamente,
+  porém no "Exemplo de saída" no corpo da questão, não houve esta ordenação para as notas >= 8.*/
