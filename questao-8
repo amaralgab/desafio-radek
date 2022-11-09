@@ -1,0 +1,12 @@
+Mensageria: padrão utilizado para a integração de aplicações através de mensagens, tornando possível uma aplicação invocar uma funcionalidade de outra aplicação, transferência de dados entre as aplicações, entre outras funcionalidades. Exemplo de utilização deste padrão:
+@Configuration
+@EnableIntegration
+public class EventMessage {
+    @Bean
+	public MessageChannel eventChannel() {
+	    return new PublishSubscribeChannel();
+	}
+}
+Esta é apenas uma parte do código neste padrão, pois ainda existem outras etapas para lidar com a mensagem.
+
+Transferência de arquivos: possibilita a transferência de arquivos de uma aplicação Spring para outra aplicação.
