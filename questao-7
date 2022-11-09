@@ -1,0 +1,29 @@
+List: armazena uma lista ordenada de elementos, aceitando elementos duplicados. Cada elemento da lista pode ser acessado através do seu index. Exemplo de utilização do List:
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+	    
+	    List <String> animais;
+	    animais = new ArrayList();
+	    animais.add("Cachorro");
+	    System.out.println(animais);
+	}
+}
+
+Set: armazena uma lista de elementos, e não aceita elementos duplicados. Os elementos armazenados não podem ser buscados através do seu index. Exemplo de utilização do Set:
+import java.util.HashSet;
+import java.util.Set;
+
+public class Main {
+
+	public static void main(String[] args) {
+	    
+	    Set <String> animais;
+	    animais = new HashSet<String>();
+	    animais.add("Cachorro");
+	    System.out.println(animais);
+	}
+}
