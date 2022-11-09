@@ -1,0 +1,14 @@
+@Entity
+public class Veiculo {
+    
+    public Veiculo() {}
+    public Veiculo(String placa) {this.placa = placa;}
+    
+    @Id
+    String placa;
+    String tipo;
+    String cor;
+    Timestamp dataFabricacao = null;
+    
+    //getters e setters aqui
+}
