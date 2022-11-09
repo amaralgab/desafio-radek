@@ -1,0 +1,25 @@
+public class Main {
+	public static void main(String[] args) {
+		System.out.println(concatERemove("blablablabla", "blablabcde", 8));
+	}
+	
+	private static String concatERemove(String s, String t, Integer k) {
+	    if(s.equals(t)) {
+	        return "sim";
+	    }
+	    
+	    if(k == 0) {
+	        return "não";
+	    }
+	    
+	    if(s.length() > 0 && !t.startsWith(s)) {
+	        s = s.substring(0, s.length() - 1);
+	        k--;
+	        return concatERemove(s, t, k);
+	    }
+	    
+	    s += t.substring(s.length(), s.length() + 1);
+	    k--;
+	    return concatERemove(s, t, k);
+	}
+}
